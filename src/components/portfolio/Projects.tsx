@@ -1,4 +1,11 @@
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Code2, Award } from "lucide-react";
+
+const certifications = [
+  { name: "Google Developers", icon: Code2, color: "text-blue-500", link: "https://github.com/gajjellymadhav" },
+  { name: "Kaggle", icon: Code2, color: "text-cyan-500", link: "https://github.com/gajjellymadhav" },
+  { name: "Coursera", icon: Award, color: "text-blue-700", link: "https://github.com/gajjellymadhav" },
+  { name: "Microsoft", icon: Award, color: "text-orange-500", link: "https://github.com/gajjellymadhav" },
+];
 
 const projects = [
   {
@@ -108,6 +115,33 @@ const Projects = () => {
           >
             View more projects
           </a>
+        </div>
+
+        <div className="mt-24">
+          <div className="mb-12 text-center">
+            <h3 className="text-3xl md:text-5xl font-bold">
+              Certifications / <span className="gradient-text">Badges</span>
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {certifications.map((c) => {
+              const Icon = c.icon;
+              return (
+                <a
+                  key={c.name}
+                  href={c.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="glass rounded-2xl p-8 flex flex-col items-center justify-center gap-3 aspect-square hover:border-accent/40 hover:scale-105 transition-all duration-300"
+                >
+                  <div className="bg-white rounded-xl p-4 shadow-lg flex items-center justify-center w-20 h-20">
+                    <Icon className={`h-10 w-10 ${c.color}`} strokeWidth={2.5} />
+                  </div>
+                  <span className="text-sm text-muted-foreground font-medium text-center">{c.name}</span>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
