@@ -58,7 +58,7 @@ const Projects = () => {
     <section id="projects" className="py-32 relative">
       <div className="container px-4 max-w-6xl">
         <div className="mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-3">03 — Projects</p>
+          
           <h2 className="text-4xl md:text-6xl font-bold">Featured <span className="gradient-text">Work</span></h2>
         </div>
 
