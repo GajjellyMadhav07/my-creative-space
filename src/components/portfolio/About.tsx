@@ -1,14 +1,18 @@
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 
-const stack: Record<string, string[]> = {
-  All: ["Python", "React", "TypeScript", "Node.js", "FastAPI", "LangChain", "TensorFlow", "PostgreSQL", "AWS", "Docker"],
+const categories: Record<string, string[]> = {
   "AI/ML": ["Python", "Scikit-learn", "TensorFlow", "Pandas", "NumPy", "OpenCV", "NLP", "Deep Learning"],
   GenAI: ["LangChain", "LangGraph", "LLM Orchestration", "Hugging Face", "Vector DBs", "RAG", "n8n"],
   Languages: ["Python", "TypeScript", "JavaScript", "Java", "SQL"],
   FullStack: ["React", "Next.js", "Node.js", "Express", "FastAPI", "HTML/CSS"],
   Databases: ["PostgreSQL", "MongoDB", "MySQL", "ChromaDB"],
   Cloud: ["AWS", "Docker", "Salesforce"],
+};
+
+const stack: Record<string, string[]> = {
+  All: Array.from(new Set(Object.values(categories).flat())),
+  ...categories,
 };
 
 const About = () => {
