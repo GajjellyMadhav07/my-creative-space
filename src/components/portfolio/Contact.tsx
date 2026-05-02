@@ -17,7 +17,7 @@ const Contact = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <Button asChild size="lg" className="rounded-full px-8 h-12">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=gajjellymadhav@gmail.com"
+              href="mailto:gajjellymadhav@gmail.com?subject=Let's%20Work%20Together"
               target="_blank"
               rel="noreferrer"
             >
