@@ -1,10 +1,14 @@
-import { ExternalLink, Github, Code2, Award } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
+import certGoogle from "@/assets/cert-google.png";
+import certKaggle from "@/assets/cert-kaggle.png";
+import certCoursera from "@/assets/cert-coursera.png";
+import certMicrosoft from "@/assets/cert-microsoft.png";
 
 const certifications = [
-  { name: "Google Developers", icon: Code2, color: "text-blue-500", link: "https://github.com/gajjellymadhav" },
-  { name: "Kaggle", icon: Code2, color: "text-cyan-500", link: "https://github.com/gajjellymadhav" },
-  { name: "Coursera", icon: Award, color: "text-blue-700", link: "https://github.com/gajjellymadhav" },
-  { name: "Microsoft", icon: Award, color: "text-orange-500", link: "https://github.com/gajjellymadhav" },
+  { name: "Google Developers", image: certGoogle, link: "https://github.com/gajjellymadhav" },
+  { name: "Kaggle", image: certKaggle, link: "https://github.com/gajjellymadhav" },
+  { name: "Coursera", image: certCoursera, link: "https://github.com/gajjellymadhav" },
+  { name: "Microsoft", image: certMicrosoft, link: "https://github.com/gajjellymadhav" },
 ];
 
 const projects = [
@@ -124,23 +128,20 @@ const Projects = () => {
             </h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {certifications.map((c) => {
-              const Icon = c.icon;
-              return (
-                <a
-                  key={c.name}
-                  href={c.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="glass rounded-2xl p-8 flex flex-col items-center justify-center gap-3 aspect-square hover:border-accent/40 hover:scale-105 transition-all duration-300"
-                >
-                  <div className="bg-white rounded-xl p-4 shadow-lg flex items-center justify-center w-20 h-20">
-                    <Icon className={`h-10 w-10 ${c.color}`} strokeWidth={2.5} />
-                  </div>
-                  <span className="text-sm text-muted-foreground font-medium text-center">{c.name}</span>
-                </a>
-              );
-            })}
+            {certifications.map((c) => (
+              <a
+                key={c.name}
+                href={c.link}
+                target="_blank"
+                rel="noreferrer"
+                className="glass rounded-2xl p-8 flex flex-col items-center justify-center gap-3 aspect-square hover:border-accent/40 hover:scale-105 transition-all duration-300"
+              >
+                <div className="bg-white rounded-xl p-3 shadow-lg flex items-center justify-center w-20 h-20">
+                  <img src={c.image} alt={c.name} className="w-full h-full object-contain" />
+                </div>
+                <span className="text-sm text-muted-foreground font-medium text-center">{c.name}</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>
