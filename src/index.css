@@ -91,45 +91,13 @@
   }
 }
 
-/* Global ambient background */
+/* Global ambient background (disabled — Silk shader handles the background) */
 body {
   position: relative;
   background-color: hsl(var(--background));
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, hsl(270 95% 65% / 0.18), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 90% 10%, hsl(220 95% 60% / 0.12), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 10% 30%, hsl(300 90% 60% / 0.10), transparent 60%);
-  background-attachment: fixed;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    linear-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(0 0% 100% / 0.035) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 40%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 40%, transparent 100%);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: -20%;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 20% 80%, hsl(270 95% 65% / 0.15), transparent 40%),
-    radial-gradient(circle at 80% 20%, hsl(220 95% 60% / 0.12), transparent 40%);
-  filter: blur(60px);
-  animation: aurora 18s ease-in-out infinite alternate;
-}
-
-#root, main, nav, section, footer { position: relative; z-index: 1; }
+#root, main, nav, section, footer { position: relative; }
 
 @keyframes aurora {
   0%   { transform: translate3d(0, 0, 0) scale(1); }
