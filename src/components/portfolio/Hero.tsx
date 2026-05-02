@@ -22,7 +22,11 @@ const Hero = () => {
             </a>
           </Button>
           <Button asChild size="lg" variant="outline" className="rounded-full px-8 h-12 border-border bg-transparent hover:bg-secondary">
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <a
+              href="https://drive.google.com/drive/folders/1z-S2vbJ6FtsvrwI4oyLZWEuxKRQaxSwz?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
               Resume
               <Download className="ml-2 h-4 w-4" />
             </a>
