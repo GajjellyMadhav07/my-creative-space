@@ -98,6 +98,17 @@ const Projects = () => {
             </article>
           ))}
         </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="https://github.com/gajjellymadhav"
+            target="_blank"
+            rel="noreferrer"
+            className="text-lg font-semibold text-foreground underline underline-offset-8 decoration-accent/60 hover:decoration-accent hover:text-accent transition-colors"
+          >
+            View more projects
+          </a>
+        </div>
       </div>
     </section>
   );
