@@ -45,7 +45,7 @@ const Contact = () => {
         </div>
 
         <p className="mt-20 text-sm text-muted-foreground">
-          © 2026 Chilamkurthi Bhuvansai · Built with care
+          © 2026 Gajjelly Madhav · Built with care
         </p>
       </div>
     </section>

@@ -4,7 +4,6 @@ import About from "@/components/portfolio/About";
 // import Experience from "@/components/portfolio/Experience";
 import Projects from "@/components/portfolio/Projects";
 import Contact from "@/components/portfolio/Contact";
-import ChatBot from "@/components/portfolio/ChatBot";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
         <Projects />
         <Contact />
       </main>
-      <ChatBot />
     </div>
   );
 };
