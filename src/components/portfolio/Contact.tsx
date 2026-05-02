@@ -16,7 +16,11 @@ const Contact = () => {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
           <Button asChild size="lg" className="rounded-full px-8 h-12">
-            <a href="mailto:chbhuvansai522@gmail.com">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=gajjellymadhav@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Mail className="mr-2 h-4 w-4" /> Get in Touch
             </a>
           </Button>
@@ -25,7 +29,7 @@ const Contact = () => {
           {[
             { icon: Github, href: "https://github.com/Bhuvansai-16", label: "GitHub" },
             { icon: Linkedin, href: "#", label: "LinkedIn" },
-            { icon: Mail, href: "mailto:chbhuvansai522@gmail.com", label: "Email" },
+            // { icon: Mail, href: "mailto:chbhuvansai522@gmail.com", label: "Email" },
           ].map(({ icon: Icon, href, label }) => (
             <a
               key={label}
