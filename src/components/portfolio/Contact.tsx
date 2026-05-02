@@ -6,7 +6,7 @@ const Contact = () => {
     <section id="contact" className="py-32 relative">
       <div className="absolute inset-0 glow-bg pointer-events-none" />
       <div className="container relative z-10 px-4 max-w-4xl text-center">
-        <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-3">04 — Contact</p>
+        
         <h2 className="text-4xl md:text-6xl font-bold mb-6">
           Let's <span className="gradient-text">Work Together</span>
         </h2>

@@ -7,9 +7,6 @@ const Hero = () => {
       <div className="absolute inset-0 glow-bg pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(270_95%_65%/0.1),transparent_50%)]" />
       <div className="container relative z-10 text-center px-4 animate-fade-up">
-        <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6">
-          Portfolio · 2026
-        </p>
         <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold leading-[0.95] mb-6">
           Hey, I'm <span className="gradient-text">Bhuvansai</span>
         </h1>
