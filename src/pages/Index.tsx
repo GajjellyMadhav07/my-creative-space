@@ -5,20 +5,23 @@ import About from "@/components/portfolio/About";
 import Projects from "@/components/portfolio/Projects";
 import Contact from "@/components/portfolio/Contact";
 import ChatBot from "@/components/portfolio/ChatBot";
+import BackgroundWrapper from "@/components/BackgroundWrapper";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        {/* <Experience /> */}
-        <Projects />
-        <Contact />
-      </main>
-      <ChatBot />
-    </div>
+    <BackgroundWrapper>
+      <div className="min-h-screen text-foreground">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          {/* <Experience /> */}
+          <Projects />
+          <Contact />
+        </main>
+        <ChatBot />
+      </div>
+    </BackgroundWrapper>
   );
 };
 
